@@ -1,4 +1,4 @@
-const HoistNamedSlotBlockParams = require('../../../src/template-transforms/hoist-named-slot-block-params');
+const HoistNamedSlotBlockParams = require('../../../lib/template-transforms/hoist-named-slot-block-params');
 const astFixtures = require('../../fixtures/ast');
 const astEqual = require('../../helpers/ast').astEqual;
 

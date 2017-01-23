@@ -1,4 +1,4 @@
-const PolyfillNamedBlockSlots = require('../../../src/template-transforms/polyfill-named-block-slots');
+const PolyfillNamedBlockSlots = require('../../../lib/template-transforms/polyfill-named-block-slots');
 const astFixtures = require('../../fixtures/ast');
 const astEqual = require('../../helpers/ast').astEqual;
 

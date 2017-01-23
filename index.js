@@ -45,7 +45,7 @@ module.exports = {
 
   setupPreprocessorRegistry: function(type, registry) {
     if (type === 'parent') {
-      const PolyfillNamedBlockSlots = require('./src/broccoli/polyfill-named-block-slots');
+      const PolyfillNamedBlockSlots = require('./lib/broccoli/polyfill-named-block-slots');
 
       let fakeRootParent = {
         registry: registry,

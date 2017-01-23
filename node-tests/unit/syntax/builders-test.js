@@ -1,5 +1,5 @@
 const assert = require('power-assert');
-const builders = require('../../../src/syntax/builders');
+const builders = require('../../../lib/syntax/builders');
 const GlimmerSyntax = require('@sclaxton/glimmer-syntax');
 const slotFixtures = require('../../fixtures/named-slots');
 const astFixtures = require('../../fixtures/ast');

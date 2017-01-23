@@ -66,7 +66,7 @@
     "configPath": "tests/dummy/config",
     "before": "ember-cli-htmlbars",
     "paths": [
-      "lib/test-components"
+      "tests/dummy/lib/test-components"
     ]
   }
 }

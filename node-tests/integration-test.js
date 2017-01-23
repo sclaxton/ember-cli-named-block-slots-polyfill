@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const assert = require('power-assert');
-const PolyfillMain = require('../src/polyfill-named-block-slots');
+const lib = require('../lib');
 
 const TEMPLATE_FIXTURE_PATH = path.join(__dirname, 'fixtures/templates');
 
@@ -24,7 +24,7 @@ describe('transformNonComponentTemplate', function() {
   it('should rewrite blocks with named slots to block with an if/else case chain', function() {
     const blockWithSlots = loadTemplateFixture('block-with-slots');
     const expected = loadTemplateFixture('expected-block-with-slots-transform');
-    const result = PolyfillMain.transformNonComponentTemplate(blockWithSlots);
+    const result = lib.transformNonComponentTemplate(blockWithSlots);
 
     assertTemplateEqual(result, expected);
   });
@@ -32,7 +32,7 @@ describe('transformNonComponentTemplate', function() {
   it('should rewrite blocks with named slots and block params to block with an if/else case chain with hashed block params', function() {
     const blockWithSlotsAndBlockParams = loadTemplateFixture('block-with-slots-and-block-params');
     const expected = loadTemplateFixture('expected-block-with-slots-and-block-params-transform');
-    const result = PolyfillMain.transformNonComponentTemplate(blockWithSlotsAndBlockParams);
+    const result = lib.transformNonComponentTemplate(blockWithSlotsAndBlockParams);
 
     assertTemplateEqual(result, expected);
   });
@@ -40,7 +40,7 @@ describe('transformNonComponentTemplate', function() {
   it('should rewrite blocks with a singleton named slot to an if statement', function() {
     const blockWithSlotsAndBlockParams = loadTemplateFixture('block-with-singleton-named-slot');
     const expected = loadTemplateFixture('expected-block-with-singleton-named-slot-transform');
-    const result = PolyfillMain.transformNonComponentTemplate(blockWithSlotsAndBlockParams);
+    const result = lib.transformNonComponentTemplate(blockWithSlotsAndBlockParams);
 
     assertTemplateEqual(result, expected);
   });
@@ -50,7 +50,7 @@ describe('transformComponentTemplate', function() {
   it('should rewrite named yields to yields passing a slot name and hashed params', function() {
     const blockWithSlots = loadTemplateFixture('named-yields');
     const expected = loadTemplateFixture('expected-named-yields-transform');
-    const result = PolyfillMain.transformComponentTemplate(blockWithSlots);
+    const result = lib.transformComponentTemplate(blockWithSlots);
 
     assertTemplateEqual(result, expected);
   });
@@ -58,7 +58,7 @@ describe('transformComponentTemplate', function() {
   it('should rewrite hasBlock references to hasBlock::', function() {
     const blockWithSlotsAndBlockParams = loadTemplateFixture('has-block');
     const expected = loadTemplateFixture('expected-has-block-transform');
-    const result = PolyfillMain.transformComponentTemplate(blockWithSlotsAndBlockParams);
+    const result = lib.transformComponentTemplate(blockWithSlotsAndBlockParams);
 
     assertTemplateEqual(result, expected);
   });

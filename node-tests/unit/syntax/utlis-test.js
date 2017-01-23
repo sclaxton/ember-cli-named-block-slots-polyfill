@@ -1,5 +1,5 @@
 const assert = require('power-assert');
-const utils = require('../../../src/syntax/utils');
+const utils = require('../../../lib/syntax/utils');
 const astFixtures = require('../../fixtures/ast');
 
 describe('chainToArray', function() {
