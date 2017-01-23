@@ -1,0 +1,11 @@
+{{#block-with-slots hasBlock::=true hasBlock::blockA=true hasBlock::blockB=true as |slot params|}}
+  {{#if (ember-cli-named-block-slots-polyfill/eq slot "|anonymous|")}}
+    Here is a slot!
+  {{else if (ember-cli-named-block-slots-polyfill/eq slot "block-a")}}
+    Here is another slot!
+  {{else}}
+    {{#if (ember-cli-named-block-slots-polyfill/eq slot "block-b")}}
+      Here is a third slot!
+    {{/if}}
+  {{/if}}
+{{/block-with-slots}}

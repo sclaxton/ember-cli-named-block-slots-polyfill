@@ -1,0 +1,9 @@
+{
+  "name": "test-components",
+  "dependencies": {
+    "ember-cli-htmlbars": "*"
+  },
+  "keywords": [
+    "ember-addon"
+  ]
+}

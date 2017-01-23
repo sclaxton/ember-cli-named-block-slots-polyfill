@@ -1,0 +1,5 @@
+{{#block-with-slots hasBlock::blockA=true as |slot params|}}
+  {{#if (ember-cli-named-block-slots-polyfill/eq slot "block-a")}}
+    Here is a slot!
+  {{/if}}
+{{/block-with-slots}}

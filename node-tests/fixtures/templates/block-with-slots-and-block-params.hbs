@@ -1,0 +1,7 @@
+{{#block-with-slots as |param|}}
+  Here is a {{param}}!
+{{::block-a as |param more|}}
+  Here is a {{param}} and {{more}}!
+{{::block-b as |param another other|}}
+  Here is a {{param}} and {{another}} and this {{other}} param!
+{{/block-with-slots}}
